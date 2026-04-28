@@ -1,6 +1,6 @@
 // Protect cart page
 if (!localStorage.getItem("activeUser")) {
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 const cartItemsContainer = document.getElementById("cartItemsContainer");

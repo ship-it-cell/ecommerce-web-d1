@@ -7,7 +7,7 @@ let allProducts = [];
 let myBasket = JSON.parse(localStorage.getItem("myBasket")) || [];
 
 if (!localStorage.getItem("activeUser")) {
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }
 // Update cart count
 function updateCartCount() {
@@ -101,7 +101,7 @@ function goToCart() {
 // Logout
 function logoutUser() {
   localStorage.removeItem("activeUser");
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }
 
 // Initialize

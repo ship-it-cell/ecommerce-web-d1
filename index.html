@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Steals & Deals - Register</title>
+    <title>Local Steals & Deals - Login</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -15,44 +15,34 @@
         <div class="register-card">
             <img src="images/logo.avif" alt="Local Steals & Deals Logo" class="logo">
 
-            <h1>Create Account</h1>
-            <p>Join Local Steals & Deals and start shopping today</p>
+            <h1>Welcome Back</h1>
+            <p>Login to continue shopping smarter</p>
 
-            <form id="registerForm">
+            <form id="loginForm">
 
                 <div class="input-group">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" placeholder="Enter your full name">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email">
                 </div>
 
                 <div class="input-group">
-                    <label for="emailAddress">Email</label>
-                    <input type="email" id="emailAddress" placeholder="Enter your email">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password">
                 </div>
 
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Create password">
-                </div>
-
-                <div class="input-group">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" id="confirmPassword" placeholder="Confirm password">
-                </div>
-
-                <button type="submit" class="register-btn">Register</button>
+                <button type="submit" class="register-btn">Login</button>
 
                 <p class="login-link">
-                    Already have an account?
-                    <a href="login.html">Login here</a>
+                    Don't have an account?
+                    <a href="register.html">Register here</a>
                 </p>
 
-                <p id="formMessage" class="form-message"></p>
+                <p id="loginMessage" class="form-message"></p>
 
             </form>
         </div>
     </div>
 
-    <script src="js/register.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

@@ -72,7 +72,7 @@ function goToCart() {
 
 function logoutUser() {
     localStorage.removeItem("activeUser");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 // Initialize
