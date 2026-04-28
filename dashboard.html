@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Steals & Deals - Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="main-header">
+        <div class="logo-section">
+            <img src="images/logo.avif" alt="Logo" class="nav-logo">
+            <h2>Local Steals & Deals</h2>
+        </div>
+
+        <nav class="nav-actions">
+            <input type="text" id="searchBar" placeholder="Search products...">
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="jewelery">Jewelry</option>
+                <option value="men's clothing">Men's Clothing</option>
+                <option value="women's clothing">Women's Clothing</option>
+            </select>
+
+            <button onclick="goToCart()" class="cart-btn">
+                Cart (<span id="cartCount">0</span>)
+            </button>
+
+            <button onclick="logoutUser()" class="logout-btn">
+                Logout
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <h1>Find Amazing Local Deals</h1>
+        <p>Save big on trending products every day</p>
+    </section>
+
+    <!-- Product Section -->
+    <main>
+        <section class="products-section">
+            <div id="productsContainer" class="products-grid">
+                <!-- Products dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

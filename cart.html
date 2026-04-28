@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Steals & Deals - My Cart</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="main-header">
+        <div class="logo-section">
+            <img src="images/logo.avif" alt="Logo" class="nav-logo">
+            <h2>Local Steals & Deals</h2>
+        </div>
+
+        <nav class="nav-actions">
+            <button onclick="goToDashboard()" class="cart-btn">
+                Continue Shopping
+            </button>
+
+            <button onclick="logoutUser()" class="logout-btn">
+                Logout
+            </button>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <main>
+        <section class="cart-section">
+            <h1>Your Shopping Cart</h1>
+
+            <div id="cartItemsContainer" class="cart-items-container">
+                <!-- Cart items dynamically loaded -->
+            </div>
+
+            <div class="cart-summary">
+                <h2>Total: $<span id="cartTotal">0.00</span></h2>
+                <button id="checkoutBtn" class="checkout-btn">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

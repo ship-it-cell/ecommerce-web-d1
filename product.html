@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Steals & Deals - Product Details</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="main-header">
+        <div class="logo-section">
+            <img src="images/logo.avif" alt="Logo" class="nav-logo">
+            <h2>Local Steals & Deals</h2>
+        </div>
+
+        <nav class="nav-actions">
+            <button onclick="goToDashboard()" class="cart-btn">
+                Back to Dashboard
+            </button>
+
+            <button onclick="goToCart()" class="cart-btn">
+                Cart
+            </button>
+
+            <button onclick="logoutUser()" class="logout-btn">
+                Logout
+            </button>
+        </nav>
+    </header>
+
+    <!-- Product Details -->
+    <main>
+        <section class="product-details-section">
+            <div id="productDetailsContainer" class="product-details-container">
+                <!-- Product details loaded dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <script src="js/product.js"></script>
+</body>
+</html>
