@@ -7,37 +7,37 @@ loginForm.addEventListener("submit", function(event) {
     const loginEmail = document.getElementById("loginEmail").value.trim();
     const loginPassword = document.getElementById("loginPassword").value.trim();
 
-    // Reset message
     loginMessage.style.color = "red";
     loginMessage.textContent = "";
 
-    // Check empty fields
     if (!loginEmail || !loginPassword) {
         loginMessage.textContent = "Please fill in all fields.";
         return;
     }
 
-    // Retrieve registered user
-    const savedUser = JSON.parse(localStorage.getItem("customerProfile"));
+    // Get registered users
+    const registeredUsers = JSON.parse(localStorage.getItem("registeredUsers")) || [];
 
-    // Check if user exists
-    if (!savedUser) {
-        loginMessage.textContent = "No registered user found. Please register first.";
+    if (registeredUsers.length === 0) {
+        loginMessage.textContent = "No registered users found. Please register first.";
         return;
     }
 
-    // Validate credentials
-    if (
-        loginEmail === savedUser.emailAddress &&
-        loginPassword === savedUser.password
-    ) {
-        // Save active session
+    // Find matching user
+    const validUser = registeredUsers.find(
+        user =>
+            user.emailAddress === loginEmail &&
+            user.password === loginPassword
+    );
+
+    if (validUser) {
         localStorage.setItem("activeUser", loginEmail);
 
         loginMessage.style.color = "green";
         loginMessage.textContent = "Login successful! Redirecting...";
 
-        // Redirect to dashboard
+        loginForm.reset();
+
         setTimeout(() => {
             window.location.href = "dashboard.html";
         }, 1500);
